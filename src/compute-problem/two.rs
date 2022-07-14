@@ -23,6 +23,8 @@ fn main() {
 
     // P1 P2 没有写出来具体的uncompressed point的encode格式，是因为感觉时间上来不及看文档和查资料了，随便查一下就浪费不少时间，但是0x04肯定是65个字节的前缀，
     // 后64个字节前32个字节和后32个字节分别编码x和y坐标
+
+    // 最后还是做出来了。
     let mut buf: [u8; 65]  = [0x00; 65];
     buf[0] = 0x04;
     buf[1..33].copy_from_slice(&vec_to_u8_32(&x_big_endian));
