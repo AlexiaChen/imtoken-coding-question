@@ -1,0 +1,27 @@
+[package]
+name = "imtoken"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+
+[[bin]]
+name = "compute-one"
+path = "src/compute-problem/one.rs"
+
+[[bin]]
+name = "compute-two"
+path = "src/compute-problem/two.rs"
+
+
+
+
+[dependencies]
+# secp256k1 = "0.23.3"
+secp256kfun = "0.7.1"
+num-bigint = {version = "0.2.6", features = ["rand"]}
+num-integer = "0.1.44"
+num-primes = "0.1.2"
+num-traits = "0.2.14"
+rand = "0.5.6"
